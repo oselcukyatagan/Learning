@@ -7,8 +7,8 @@ class fr {
     public static void main(String[] args) {
 
 
-        int[] nums = {1,3,5,7};
-        int target = 6;
+        int[] nums = {1, 3, 5, 7};
+        int target = 8;
         searchInsert(nums, target);
 
     }
@@ -16,7 +16,6 @@ class fr {
     public static int searchInsert(int[] nums, int target) {
 
         ArrayList<Integer> a = new ArrayList();
-        int x = 0;
 
         for(int i = 0; i < nums.length; i++) {
             if(nums[i] == target) {
@@ -27,12 +26,19 @@ class fr {
 
         if(a.size() == 0) {
 
-            while(nums[x] < target) {
-                x += 1;
-
+            int size = nums.length;
+            if(target > nums[size - 1]) {
+                System.out.println(nums.length + 1);
             }
-            System.out.println(x);
-        }
+            else {
+                for(int x = 0; x <= nums.length; ) {
+                    while(nums[x] < target) {
+                        x++;
+                    }
+                    System.out.println(x);
+                }
+            }
+            }
         return 0;
+        }
     }
-}
