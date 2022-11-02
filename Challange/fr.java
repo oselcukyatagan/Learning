@@ -2,7 +2,7 @@ package newPack;
 
 import java.util.ArrayList;
 
-class fr {
+class water {
 
     public static void main(String[] args) {
 
@@ -10,7 +10,6 @@ class fr {
         int[] nums = {1, 3, 5, 7};
         int target = 8;
         searchInsert(nums, target);
-
     }
 
     public static int searchInsert(int[] nums, int target) {
@@ -26,9 +25,8 @@ class fr {
 
         if(a.size() == 0) {
 
-            int size = nums.length;
-            if(target > nums[size - 1]) {
-                System.out.println(nums.length + 1);
+            if(target > nums[nums.length - 1]) {
+                System.out.println(nums.length);
             }
             else {
                 for(int x = 0; x <= nums.length; ) {
@@ -38,7 +36,7 @@ class fr {
                     System.out.println(x);
                 }
             }
-            }
-        return 0;
         }
+        return 0;
     }
+}
